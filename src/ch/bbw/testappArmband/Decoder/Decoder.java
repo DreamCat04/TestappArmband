@@ -42,10 +42,11 @@ public class Decoder {
 			
 		} else {
 		String[] splitCode = code.split("-");
-		String location = splitCode[0];
+		String location = days.get(splitCode[0].substring(0,2));
+		int year = Integer.parseInt(splitCode[0].substring(2,4));
 		//Hexadecimal to decimal
 		int id = Integer.parseInt(splitCode[1], 16);
-		
+
 		
 		
 		
