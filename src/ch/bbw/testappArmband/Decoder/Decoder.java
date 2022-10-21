@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class Decoder {
 	// The decoder should decode all the code blocks
 	public Decoder() { //Constructor
-		HashMap<String, String> festivalNames = new HashMap<String, String>();
-		HashMap persons = new HashMap<>();
-		HashMap days = new HashMap<String, String>();
-		HashMap<Integer, String> zones = new HashMap<Integer, String>();
+		HashMap<String, String> festivalNames = new HashMap<>();
+		HashMap<Integer, String> persons = new HashMap<>();
+		HashMap<String, String> days = new HashMap<>();
+		HashMap<Integer, String> zones = new HashMap<>();
 		
 		festivalNames.put("FO", "Frauenfeld Openair");
 		festivalNames.put("SO", "St.Gallen Openair");
@@ -31,6 +31,11 @@ public class Decoder {
 		days.put("D", "Do, Sa, So");
 		days.put("E", "Fr - So");
 		days.put("F", "Alle Tage");
+		
+		persons.put(175731, "Hans Muster");
+		persons.put(22930, "Maria Heller");
+		persons.put(134178, "Max Beispiel");
+		persons.put(168232, "Fritz Box");
 		
 		
 		
