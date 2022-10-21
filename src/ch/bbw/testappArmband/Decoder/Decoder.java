@@ -16,15 +16,15 @@ public class Decoder {
 		festivalNames.put("OG", "Openair Gampel");
 		festivalNames.put("OZ", "Openair Zürich");
 		
-		days.put(1, "Donnerstag");
-		days.put(2, "Freitag");
-		days.put(3, "Do & Fr");
-		days.put(4, "Samstag");
-		days.put(5, "Do & Sa");
-		days.put(6, "Fr & Sa");
-		days.put(7, "Do & Sa");
-		days.put(8, "Sonntag");
-		days.put(9, "Do & So");
+		days.put("1", "Donnerstag");
+		days.put("2", "Freitag");
+		days.put("3", "Do & Fr");
+		days.put("4", "Samstag");
+		days.put("5", "Do & Sa");
+		days.put("6", "Fr & Sa");
+		days.put("7", "Do & Sa");
+		days.put("8", "Sonntag");
+		days.put("9", "Do & So");
 		days.put("A", "Fr & So");
 		days.put("B", "Do, Fr, So");
 		days.put("C", "Sa & So");
