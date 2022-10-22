@@ -16,15 +16,15 @@ public class Decoder {
 		festivalNames.put("OG", "Openair Gampel");
 		festivalNames.put("OZ", "Openair Zürich");
 		
-		days.put(1, "Donnerstag");
-		days.put(2, "Freitag");
-		days.put(3, "Do & Fr");
-		days.put(4, "Samstag");
-		days.put(5, "Do & Sa");
-		days.put(6, "Fr & Sa");
-		days.put(7, "Do & Sa");
-		days.put(8, "Sonntag");
-		days.put(9, "Do & So");
+		days.put("1", "Donnerstag");
+		days.put("2", "Freitag");
+		days.put("3", "Do & Fr");
+		days.put("4", "Samstag");
+		days.put("5", "Do & Sa");
+		days.put("6", "Fr & Sa");
+		days.put("7", "Do & Sa");
+		days.put("8", "Sonntag");
+		days.put("9", "Do & So");
 		days.put("A", "Fr & So");
 		days.put("B", "Do, Fr, So");
 		days.put("C", "Sa & So");
@@ -39,14 +39,13 @@ public class Decoder {
 		String code = keyboard.next();
 		if(code.length() != 18) {
 			System.out.println("Sie haben einen ungültigen Code eingeben.");
-			
 		} else {
 		String[] splitCode = code.split("-");
-		String location = splitCode[0];
+		String location = splitCode[0].substring(0, 2);
+		int year = Integer.parseInt(splitCode[0].substring(2,4));
 		//Hexadecimal to decimal
 		int id = Integer.parseInt(splitCode[1], 16);
-		
-		
+
 		
 		
 		}
