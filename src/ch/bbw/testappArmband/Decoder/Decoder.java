@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Decoder {
 	// The decoder should decode all the code blocks
-	public Decoder() { //Constructor
+	public Decoder() {
+		// These HashMaps are used for decoding
 		HashMap<String, String> festivalNames = new HashMap<String, String>();
 		HashMap persons = new HashMap<>();
 		HashMap <String, String> days = new HashMap<String, String>();
@@ -49,7 +50,6 @@ public class Decoder {
 		String dates = splitCode[2];
 		String binaryZone = splitCode[3];
 
-		
 		}
 	}
 	
