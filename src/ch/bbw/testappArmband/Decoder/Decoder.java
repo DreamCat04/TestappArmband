@@ -35,8 +35,6 @@ public class Decoder {
 		days.put("F", "Alle Tage");
 
 
-		boolean run = true;
-	while (run) {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.print("Geben Sie hier ihren Code ein: ");
 		String code = keyboard.next();
@@ -45,13 +43,10 @@ public class Decoder {
 		//Validation of the Bar-code
 		if (code.length() != 18) {
 			System.out.println("Sie haben einen ungültigen Code eingeben.");
-			System.exit(0);
 		} else if (! splitCode[0].substring(0, 2).matches("(.*[A-Z].*)")) {
 			System.out.println("Sie haben einen ungültigen Code eingeben, die ersten beiden Stellen des Codes können nur Buchstaben sein.");
 		} else if (! splitCode[0].substring(2, 4).matches("(.*[0-9].*)")){
 			System.out.println("Sie haben einen ungültigen Code eingeben, die letzten Stellen des ersten Blocks können nur Zahlen sein.");
-		} else if () {
-
 		}
 
 		String location = festivalNames.get(splitCode[0].substring(0, 2));
@@ -60,10 +55,9 @@ public class Decoder {
 		int id = Integer.parseInt(splitCode[1], 16);
 		String dates = splitCode[2];
 		String binaryZone = splitCode[3];
-	}
+
 
 
 		}
 
 	}
-}
