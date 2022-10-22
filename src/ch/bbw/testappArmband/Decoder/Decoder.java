@@ -43,21 +43,57 @@ public class Decoder {
 		//Validation of the Bar-code
 		if (code.length() != 18) {
 			System.out.println("Sie haben einen ungültigen Code eingeben.");
-		} else if (! splitCode[0].substring(0, 2).matches("(.*[A-Z].*)")) {
-			System.out.println("Sie haben einen ungültigen Code eingeben, die ersten beiden Stellen des Codes können nur Buchstaben sein.");
-		} else if (! splitCode[0].substring(2, 4).matches("(.*[0-9].*)")){
-			System.out.println("Sie haben einen ungültigen Code eingeben, die letzten Stellen des ersten Blocks können nur Zahlen sein.");
-		}
+			System.exit(1);
+		} else {
+			if (! splitCode[0].substring(0, 2).matches("(.*[A-Z].*)")) {
+			System.out.println("Sie haben einen ungültigen Code eingeben, .");
+			System.exit(1);
 
+		} if (! splitCode[0].substring(2, 4).matches("(.*[0-9].*)")) {
+			System.out.println("Sie haben eine ungültige Jahreszahl angegeben.");
+				System.exit(1);
+
+		} if (splitCode[1].matches("(.*[G-Z].*)")) {
+			System.out.println("Sie haben eine nicht existente ID eigegeben.");
+				System.exit(1);
+
+		} if (splitCode[2].matches("(.*[G-Z].*)")) {
+			System.out.println("Sie haben eine ungültiges Datum angegeben.");
+				System.exit(1);
+
+			} if (splitCode[3].matches("(.*[A-Z].*)") || splitCode[3].matches("(.*[2-9].*)")){
+				System.out.println("Sie haben ungültige Zonen eingegeben.");
+			}
+		}
 		String location = festivalNames.get(splitCode[0].substring(0, 2));
-		int year = Integer.parseInt(splitCode[0].substring(2, 4));
+		int year = 2000 + Integer.parseInt(splitCode[0].substring(2, 4));
 		//Hexadecimal to decimal
 		int id = Integer.parseInt(splitCode[1], 16);
-		String dates = splitCode[2];
-		String binaryZone = splitCode[3];
+		String dates = days.get(splitCode[2]);
+		StringBuffer Zones = new StringBuffer();
 
-
-
+		//Decoding the zone
+		if (splitCode[3].charAt(0) == '1') {
+			Zones.append("A");
+		} if (splitCode[3].charAt(1) == '1') {
+			Zones.append("B");
+		} if (splitCode[3].charAt(2) == '1') {
+			Zones.append("C");
+		} if (splitCode[3].charAt(3) == '1') {
+			Zones.append("D");
+		} if (splitCode[3].charAt(4) == '1') {
+			Zones.append("E");
 		}
+
+		System.out.println("Name der Veranstaltung:		" + location);
+		System.out.println("Das Veranstaltungsjahr:		" + year);
+		System.out.println("Die Kundennummer:			" + id);
+		System.out.println("Die Tage der Gültigkeit:	" + dates);
+		System.out.println("Die gebuchten Zonen:		" + Zones);
+
+
+
+
+	}
 
 	}
