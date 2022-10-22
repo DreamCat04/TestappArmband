@@ -1,5 +1,6 @@
 package ch.bbw.testappArmband.Decoder;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Decoder {
 	public Decoder() { //Constructor
 		HashMap<String, String> festivalNames = new HashMap<String, String>();
 		HashMap persons = new HashMap<>();
-		HashMap days = new HashMap<String, String>();
+		HashMap <String, String> days = new HashMap<String, String>();
 		HashMap<Integer, String> zones = new HashMap<Integer, String>();
 		
 		festivalNames.put("FO", "Frauenfeld Openair");
@@ -45,8 +46,9 @@ public class Decoder {
 		int year = Integer.parseInt(splitCode[0].substring(2,4));
 		//Hexadecimal to decimal
 		int id = Integer.parseInt(splitCode[1], 16);
+		String dates = splitCode[2];
+		String binaryZone = splitCode[3];
 
-		
 		
 		}
 	}
