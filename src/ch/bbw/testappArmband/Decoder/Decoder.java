@@ -58,7 +58,7 @@ public class Decoder {
 				System.exit(1);
 
 		} if (splitCode[2].matches("(.*[G-Z].*)")) {
-			System.out.println("Sie haben eine ungültiges Datum angegeben.");
+			System.out.println("Sie haben ein ungültiges Datum angegeben.");
 				System.exit(1);
 
 			} if (splitCode[3].matches("(.*[A-Z].*)") || splitCode[3].matches("(.*[2-9].*)")){
