@@ -54,7 +54,7 @@ public class Decoder {
 				System.exit(1);
 
 		} if (splitCode[1].matches("(.*[G-Z].*)")) {
-			System.out.println("Sie haben eine nicht existente ID eigegeben.");
+			System.out.println("Sie haben eine nicht existente ID eingegeben.");
 				System.exit(1);
 
 		} if (splitCode[2].matches("(.*[G-Z].*)")) {
