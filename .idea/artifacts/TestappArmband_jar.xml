@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TestappArmband:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TestappArmband_jar</output-path>
+    <root id="archive" name="TestappArmband.jar">
+      <element id="module-output" name="TestappArmband" />
+    </root>
+  </artifact>
+</component>
