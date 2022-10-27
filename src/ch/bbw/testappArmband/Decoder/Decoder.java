@@ -47,7 +47,7 @@ public class Decoder {
             System.exit(1);
         } else {
             //Error message 2
-            if (! "FOSGZ".contains(splitCode[1].substring(0,2))) {
+            if (! "FOSGZ".contains(splitCode[0].substring(0,2))) {
                 System.out.println("Sie haben einen ungültigen Code eingeben.");
                 System.exit(1);
 
