@@ -9,10 +9,10 @@ public class Decoder {
     public Decoder() {
         // These HashMaps are used for decoding
         HashMap<String, String> festivalNames = new HashMap<String, String>();
-        HashMap persons = new HashMap<>();
         HashMap<String, String> days = new HashMap<String, String>();
         HashMap<Integer, String> zones = new HashMap<Integer, String>();
 
+        //In a real case scenario we would use a  of this HashMap
         festivalNames.put("FO", "Frauenfeld Openair");
         festivalNames.put("SO", "St.Gallen Openair");
         festivalNames.put("OG", "Openair Gampel");
